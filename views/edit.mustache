@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <title>Edit Beer</title>
+</head>
+
+<body>
+
+  <h1><a href="/">Add a Good Beer</h1></a>
+
+  <div class="wrapper">
+    <form class="" action="/app/{{beer._id}}" method="post">
+      <div class="brewery">
+        <label for="brewery">Brewery</label>
+        <input type="text" name="brewery" value="{{beer.brewery}}">
+        {{#errors.brewery}}Brewery is required{{/errors.brewery}}
+      </div>
+      <div class="name">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="{{beer.name}}">
+        {{#errors.name}}Name is required{{/errors.name}}
+      </div>
+      <div class="style">
+        <label for="style">Style</label>
+        <input type="text" name="style" value="{{beer.style}}">
+        {{#errors.style}}Style is required{{/errors.style}}
+      </div>
+      <div class="abv">
+        <label for="abv">ABV</label>
+        <input type="number" name="abv" value="{{beer.abv}}">
+        {{#errors.abv}}ABV is required{{/errors.abv}}
+      </div>
+      <div class="state">
+        <label for="state">State</label>
+        <input type="text" name="state" value="{{beer.state}}">
+        {{#errors.state}}State is required{{/errors.state}}
+      </div>
+      <div class="city">
+        <label for="city">City</label>
+        <input type="text" name="city" value="{{beer.city}}">
+        {{#errors.city}}City is required{{/errors.city}}
+      </div>
+
+      <button type="submit" name="button">Update Beer</button>
+    </form>
+  </div>
+</body>
+
+</html>

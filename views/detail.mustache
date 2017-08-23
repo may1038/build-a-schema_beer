@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <title>{{beer.brewery}}: {{beer.name}}</title>
+</head>
+
+<body>
+
+  <h1><a href="/">{{beer.brewery}}</h1></a>
+
+  <div class="wrapper">
+    <h3>Name: {{beer.name}}</h3>
+    <h3>Style: {{beer.style}}</h3>
+    <h3>Abv: {{beer.abv}}</h3>
+    <h3>State: {{beer.state}}</h3>
+    <h3>City: {{beer.city}}</h3>
+
+    <div class="editDelete">
+      <a href="/app/{{beer._id}}/edit">Edit</a>
+      <a href="/app/{{beer._id}}/delete">Delete</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

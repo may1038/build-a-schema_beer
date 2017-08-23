@@ -4,16 +4,15 @@ const mongoose = require("mongoose")
 
 //define the schema
 const goodBeer = new mongoose.Schema({
-  brewery: { type: String, required: true, unique: true },
-  state: String,
-  city: String,
-  address: String,
-  name: String,
-  style: String,
-  abv: Number
+  brewery: { type: String, required: true },
+  name: { type: String, required: true, unique: true },
+  style: { type: String, required: true },
+  abv: { type: Number, required: true },
+  state: { type: String, required: true },
+  city: { type: String, required: true }
 })
 //create a model using that schema
-const beer = mongoose.model("beer", goodBeer)
+const Beer = mongoose.model("beer", goodBeer)
 
 //export
-module.exports = beer
+module.exports = Beer

@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Test</h1>
 
-  </body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="utf-8">
+  <title>Good Beer</title>
+</head>
+
+<body>
+  
+  <h1><a href="/">Good Beer</h1></a>
+  <div class="wrapper">
+    <div class="insideWrapper">
+      <a href="/beer/new">New Beer</a>
+
+
+      {{#beer}}
+        <li><a href="/app/{{_id}}">{{name}}</a></li>
+      {{/beer}}
+    </div>
+  </div>
+</body>
+<a href="#"></a>
 </html>
